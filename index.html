@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucciola — Firefly III for iOS</title>
-  <meta name="description" content="A native iOS client for Firefly III. Track spending, manage budgets, and monitor your finances from your iPhone." />
+  <title>miira</title>
+  <meta name="description" content="iOS developer." />
   <style>
     :root {
       --bg: #FFF8F0;
@@ -37,20 +37,21 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 48px 24px 64px;
     }
 
     .container {
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    header {
+      max-width: 480px;
+      width: 100%;
       text-align: center;
-      margin-bottom: 48px;
     }
 
-    .wordmark {
+    .name {
       font-size: 2.75rem;
       font-weight: 700;
       letter-spacing: -0.02em;
@@ -58,7 +59,7 @@
       line-height: 1.1;
     }
 
-    .tagline {
+    .role {
       margin-top: 10px;
       font-size: 1rem;
       color: var(--text-secondary);
@@ -73,15 +74,6 @@
       border-radius: 2px;
     }
 
-    .description {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      text-align: center;
-      max-width: 520px;
-      margin: 0 auto 48px;
-      line-height: 1.75;
-    }
-
     .section-label {
       font-size: 0.75rem;
       font-weight: 600;
@@ -89,19 +81,11 @@
       text-transform: uppercase;
       color: var(--text-secondary);
       margin-bottom: 16px;
+      text-align: left;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+    .projects {
       margin-bottom: 48px;
-    }
-
-    @media (max-width: 480px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
     }
 
     .card {
@@ -109,13 +93,22 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px 22px;
+      text-align: left;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+
+    .card:hover .card-title {
+      color: var(--primary);
     }
 
     .card-title {
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--text);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      transition: color 0.15s ease;
     }
 
     .card-desc {
@@ -144,7 +137,6 @@
     }
 
     footer {
-      text-align: center;
       font-size: 0.8rem;
       color: var(--text-secondary);
       opacity: 0.7;
@@ -154,44 +146,25 @@
 <body>
   <div class="container">
 
-    <header>
-      <div class="wordmark">Lucciola</div>
-      <div class="tagline">A native iOS client for Firefly III</div>
-    </header>
+    <div class="name">miira</div>
+    <div class="role">iOS developer</div>
 
     <div class="divider"></div>
 
-    <p class="description">
-      Lucciola connects to your self-hosted Firefly III server. Track spending, manage budgets, and monitor your finances — all from your iPhone. Your data stays between your device and your own server.
-    </p>
-
-    <div class="section-label">Features</div>
-
-    <div class="features">
-      <div class="card">
-        <div class="card-title">Full Dashboard</div>
-        <div class="card-desc">Net worth, budgets, bills, and savings at a glance.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Smart Categorization</div>
-        <div class="card-desc">Automatic merchant matching and transaction categorization.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Apple Wallet Sync</div>
-        <div class="card-desc">Detect purchases from Apple Wallet via FinanceKit.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Siri &amp; Shortcuts</div>
-        <div class="card-desc">Log transactions hands-free with voice commands.</div>
-      </div>
+    <div class="projects">
+      <div class="section-label">Projects</div>
+      <a class="card" href="https://miiraheart.github.io/lucciola/">
+        <div class="card-title">Lucciola</div>
+        <div class="card-desc">A native iOS client for Firefly III.</div>
+      </a>
     </div>
 
     <div class="links">
-      <a href="https://miiraheart.github.io/lucciola-privacy/">Privacy Policy</a>
       <a href="mailto:lucciola@miira.me">Contact</a>
+      <a href="https://github.com/miiraheart">GitHub</a>
     </div>
 
-    <footer>Lucciola &middot; Made with care &middot; 2026</footer>
+    <footer>2026</footer>
 
   </div>
 </body>
